@@ -27,9 +27,7 @@ public class Cachorro extends Animal {
      * e mantém o comportamento da superclasse via super.informarCoisas().
      */
     @Override
-    public void informarCoisas() {
-        super.informarCoisas();  // já imprime o nome
-        System.out.println("Raça do cachorro: " + this.getRaca());
-        System.out.println("------------------------------------");
+    public String getDescricao() {
+        return super.getDescricao() + "\nRaça: " + raca + "\n------------------------------------";
     }
 }

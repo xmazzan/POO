@@ -1,6 +1,7 @@
 import reinoanimalia.Animal;   // Importa a classe base Animal
 import reinoanimalia.Cachorro; // Importa a subclasse Cachorro
 import reinoanimalia.Gato;
+import reinoanimalia.Leao;
 
 // Classe que demonstra a criação e uso de objetos Animal e Cachorro
 public class brincandoComAnimais {
@@ -29,7 +30,7 @@ public class brincandoComAnimais {
             cachorro2.setRaca("Poodle");   // Muda somente a raça
             cachorro2.getDescricao();          // Exibe
 
-            cachorro2.setNome("");            // Testando o setNome nulo 
+            cachorro2.setNome("arroz");            // Testando o setNome nulo 
             System.out.println(cachorro2.getDescricao());          // Exibe
 
             Gato gato1 = new Gato("Mia", "Branco");
@@ -37,6 +38,15 @@ public class brincandoComAnimais {
 
             Gato gato2 = new Gato(null , "preto"); // Cria um Gato - nome nulo dessa forma da certo
             System.out.println(gato2.getDescricao());  // testando se deu certo rs                // Exibe informações do Gato
+
+            Leao leaozinho = new Leao(); //
+            leaozinho.seturro("Roar!"); // Define o som do Leão
+            leaozinho.setCor("Amarelo"); // Define a cor do Leão
+            leaozinho.setIdade(5); // Define a idade do Leão
+            leaozinho.setNome("Simba"); // Define o nome do Leão
+            System.out.println(leaozinho.getDescricao()); // Exibe informações do Leão
+            System.out.println(leaozinho.fazOUrro()); // Exibe urro do Leão
+
         } catch (Exception ex) {
             // Caso ocorra qualquer erro, lança exceção indicando problema na inicialização
             throw new UnsupportedOperationException("Erro ao iniciar a aplicação", ex);
